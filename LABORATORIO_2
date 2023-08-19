@@ -1,0 +1,185 @@
+## Tarea 1
+Crear un algoritmo que permita utilizar el valor de tres productos, sume los tres valores (Subtotal), calcule el IGV 
+(18%) y calcule el Total.
+
+Algoritmo ejercicio_suma 
+	Escribir 'ingrese el primer numero'
+	Leer n1
+	Escribir 'ingresar el segundo numero '
+	Leer n2
+	Escribir 'ingresar el tercer numero '
+	Leer n3
+	ST <- (n1+n2+n3)
+	IGV <- (ST+ST*0.18)-(ST)
+	Escribir 'el subtotal es:', ST
+	Escribir 'el IGV es:', IGV
+FinAlgoritmo
+
+## Tarea 2
+Realiza un DF para un algoritmo que permita calcular el área y el volumen de un cilindro.
+
+Algoritmo sin_titulo
+	Escribir "igresar la altura del"
+	Leer H
+	Escribir "ingresar la base del c"
+	Leer B
+	R<-(B/2)
+	Escribir "el radio del cilindro"
+	Ac<-((2*PI)*(R)*(H)+(2*PI)*(R*R))
+	Escribir "el area del cilindro es:", Ac
+	Escribir "ahora conociendo que"
+	Ac<-(PI*R*R)*H
+	Escribir "el volumen del cilindro es :",vc
+FinAlgoritmo
+
+## Tarea 3
+Realiza un DF para un algoritmo que permita convertir un monto en soles, a un monto en dólares. Tipo de cambio 
+S/.3.40.
+
+Algoritmo MONTO_DOLARES
+	Escribir "ingrese el monto que"
+	Leer MS
+	VC<-3.40
+	MD<-(MS/VC)
+	Escribir "su monto en dolares es :" MD	
+FinAlgoritmo
+
+## Tarea 4
+Realiza un DF para un algoritmo que permita utilizar la velocidad de un auto en km por hora y lo convierta a 
+metros por segundo. 
+
+Algoritmo sin_titulo
+	Escribir "ingrese la velocidad "
+	Leer vi
+	Vc<-(Vi*1000)/(1*3600)
+	Escribir"en resultado es :" Vc
+FinAlgoritmo
+
+## Tarea 5
+Realiza un DF para un algoritmo que permita hallar el sueldo neto de un trabajador a fin de mes, considerando 
+los siguientes descuentos: AFP del 11% y Adelanto de quincena 30%. Usted debe asignar el Sueldo Básico.
+
+Algoritmo Sueldo_neto
+	Escribir 'usted recide el sueldo'
+	ST<-930
+	IGV<-(ST-ST*0.11)
+	Escribir 'su sueldo actual con'
+	Escribir 'ahora dede sumar el'
+	Q<-(ST/2)
+	QT<-(Q*0.30)
+	SN<-(IGV+QT)
+	Escribir 'el sueldo neto es:', SN
+FinAlgoritmo
+
+## Tarea 6
+Realiza un DF para un algoritmo que permita hallar la Nota final de un alumno, este tendrá tres notas de 
+laboratorios, cuyo promedio vale el 80% del curso y un examen final que vale el 20% del curso.
+
+Algoritmo Nota_Final
+	Escribir 'primera nota'
+	Leer A
+	Escribir 'segunda nota'
+	Leer B
+	Escribir 'tercera nota'
+	Leer C
+	NM<-13
+	P<-(A+B+C)/3
+	NF<-(P*0.8)+(NM*0.2)
+	Escribir 'La nota final es:' NF
+FinAlgoritmo
+
+## Tarea 7 : Ejercicios. 
+Ejercicio 1: La empresa constructora DEM S.A. desea vender un terreno con la forma de la figura 1, para ello se 
+necesita crear un algoritmo que pueda obtener el área del terreno.
+
+Algoritmo sin_titulo
+	Escribir "base mayor "
+	Leer A
+	Escribir "base menor"
+	Leer C
+	Escribir "altura "
+	Leer B
+	AT<-(A+C)*B/2
+	Escribir "el area es :" AT
+	
+FinAlgoritmo
+
+Ejercicio 2: La empresa DEM S.A. está contratando personal y requiere determinar la edad de postulantes, pero 
+cuando se les realiza la entrevista sólo se les pregunta el año en que nacieron. Realice el diagrama de flujo y 
+pseudocódigo que representen el algoritmo para solucionar este problema. 
+
+Pseudocodigo: 
+- Ingresa año de nacimiento, leer 'AN'
+- Determinar fecha actual, 'FA' igual a 2023
+- Detreminar que, la edad ('E') es igual a la resta de 'FA' y 'AN'
+- Imprimir o escribir el resultado, edad ('E').
+
+Algoritmo EDAD
+	Escribir 'Año de nacimiento'
+	Leer AN
+	Escribir 'Fecha actual'
+	FA <- 2023
+	E<-(FA-AN)
+	Escribir 'LA EDAD ES:' E
+FinAlgoritmo
+
+# Otra forma.
+Algoritmo EDAD
+	Escribir 'Año de nacimiento'
+	Leer AN
+	Escribir 'Fecha actual'
+	Leer FA
+	E<-(FA-AN)
+	Escribir 'LA EDAD ES:' E
+FinAlgoritmo
+
+Ejercicio 3: Se desea calcular la potencia eléctrica del circuito de la figura 2, realice un diagrama de flujo y el 
+pseudocódigo que representen el algoritmo para resolver el problema. Considere que: P = V*I y V = R*I. 
+
+Pseudocódigo:
+- Ingresa el voltaje 'V'
+- Ingresa la corriente 'I'
+- Determinar la resistencia ('R') igual a 40
+- Determinar el proceso, 'V' es igual a la multiplicacion de 'R' e 'I'
+- Determinar el proceso, potencia ('P') es igual a la multiplicacion de 'V' e 'I'
+- Imprimir o escribir el resultado, la potencia electrica es 'P'
+
+Algoritmo Potencia_electrica
+	Escribir 'voltaje'
+	Leer V
+	Escribir 'corriente'
+	Leer I
+	Escribir 'resistencia'
+	R<-40
+	V<-(R*I)
+	Escribir 'potencia'
+	P<-(V*I)
+	Escribir 'la potencia electrica es:' P
+FinAlgoritmo
+
+Ejercicio 4: Una tienda por departamento tiene una promoción: a todas las compras mayores de S/3000.00 se les 
+aplicará un descuento de 10%, a todos los demás se les aplicará sólo 5%. Realice un algoritmo para determinar el precio 
+final que debe pagar una persona por comprar en la tienda y de cuánto es el descuento que obtendrá. 
+Algoritmo ejer4_Tienda_Promocional
+	Escribir 'precio inicial'
+	Leer n
+	
+	si n>3000 Entonces
+		Escribir DMA
+		DMA<-(0.1*n)
+		Escribir 'precio es' 
+		PF<-(n-DMA)
+		Escribir 'el precio final es:' PF
+		Escribir 'el descuento es:' DMA
+	SiNo
+		Escribir DME5300
+		DME<-(0.05*n)
+		Escribir 'precio es'
+		PF<-(n-DME)
+		Escribir 'El precio final es:' PF
+		Escribir 'El descuento es:' DME
+	
+	FinSi
+	
+	
+FinAlgoritmo
