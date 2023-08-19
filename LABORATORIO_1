@@ -1,0 +1,4 @@
+## Tarea 1
+num = int(input("ingrese el numero n:"))
+suma = int(num*(num+1)/2)
+print("es:" + str(suma))
