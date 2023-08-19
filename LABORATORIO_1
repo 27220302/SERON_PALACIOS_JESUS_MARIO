@@ -2,3 +2,34 @@
 num = int(input("ingrese el numero n:"))
 suma = int(num*(num+1)/2)
 print("es:" + str(suma))
+
+## Tarea 2
+num = int(input("ingrese numero n:"))
+suma = int(num/2*(2*num))
+suma = int(num**2)
+print("es:" + str(suma))
+
+## Tarea 3
+#  Encontrar la factorial de un número
+numero = int(input( "ingresa un numero : " ))
+Factorial = 1
+for n in range (1, (numero + 1)):
+    Factorial = Factorial * n
+print("El factorial de {0} es: {1}". format(numero, Factorial))
+
+## Tarea 4
+# Calcular la serie de Fibonacci hasta el n-ésimo término
+A = 0
+B = 1
+C = 0
+while True:
+    num = int(input("Ingrese un numero: "))
+    if num>1:
+        break
+print("1", end=" ")
+for i in range (0, num):
+        C = A + B
+        print(f"{C}", end=" " )
+        A = B
+        B = C
+print("")
