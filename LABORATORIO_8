@@ -5,4 +5,32 @@
 
 
 ## TAREA 3
+print("Hola python contraseña segura")
+contraseña = input("favor de ingresar su contraseña: ")
 
+if len(contraseña) < 8:
+    print("Contraseña muy corta, debe tener al menos 8 caracteres.")
+else:
+    minuscula = False
+    for minus in contraseña:
+        if minus.islower()==True:
+            minuscula = True
+    if not minuscula:
+        print("La contraseña debe incluir almenos una minuscula.")
+    mayuscula = False
+    for mayus in contraseña:
+        if mayus.isupper()==True:
+            mayuscula = True
+    if not mayuscula:
+        print("La contraseña debe incluir almenos una mayuscula.")
+        
+    num = False
+    for carac in contraseña:
+        if carac.isdigit()==True:
+            num=True
+    if not num:
+        print("La contraseña debe contener almenos un numero.")
+    if contraseña.count(" ") > 0:
+        print("La contraseña no puede contener espacios en blanco.")
+    else: 
+        print("Contraseña segura") 
