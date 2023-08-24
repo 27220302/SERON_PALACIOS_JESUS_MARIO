@@ -62,7 +62,7 @@ https://docs.python.org/es/3/library/sys.html
 
 ## TAREA 3
 print("Hola python contraseña segura")
-contraseña = input("favor de ingresar su contraseña: ")
+contraseña = input("Haga el favor de favor de ingresar su contraseña: ")
 
 if len(contraseña) < 8:
     print("Contraseña muy corta, debe tener al menos 8 caracteres.")
