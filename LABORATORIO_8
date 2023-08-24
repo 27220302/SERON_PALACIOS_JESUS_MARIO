@@ -90,3 +90,32 @@ else:
         print("La contraseña no puede contener espacios en blanco.")
     else: 
         print("Contraseña segura") 
+
+# Ejercicio Complejo: Generador de Contraseñas Seguras
+# Contraseña Aleatorio 
+import random
+import string
+
+letras = string.ascii_letters
+digitos = string.digits
+caracteres_especiales = string.punctuation
+
+alfabeto = letras + digitos + caracteres_especiales
+
+contar_longitud = 12
+
+contraseña = ''
+for i in range(contar_longitud):
+  contraseña += ''.join(random.choice(alfabeto))
+
+print(contraseña)
+
+while True:
+  contraseña = ''
+  for i in range(contar_longitud):
+    contraseña += ''.join(random.choice(alfabeto))
+
+  if (any(caracter in caracteres_especiales for caracter in contraseña) and 
+      sum(caracter in digitos for caracter in contraseña)>=2):
+          break
+print(contraseña)
