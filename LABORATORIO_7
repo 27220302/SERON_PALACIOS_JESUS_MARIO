@@ -51,7 +51,7 @@ for country in countries:
     for language in country["languages"]:
         all_languages.add(language)
 
-print(f"El Total de idiomas es: {len(all_languages)}")
+print(f"El Total de idiomas en los datos son: {len(all_languages)}")
 
 # b) Encuentra los diez idiomas más hablados a partir de los datos.4ptos
 language_count = {}
@@ -65,7 +65,7 @@ for country in countries:
 sorted_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)
 top_languages = sorted_languages[:10]
 
-print("Los diez idiomas más hablados:")
+print("Los diez idiomas más hablados a partir de los datos son:")
 for lang, count in top_languages:
     print(f"{lang}: {count} países")
 
