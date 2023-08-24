@@ -1,7 +1,63 @@
 ## TAREA 1
+1) Ve a la carpeta de datos y accede al archivo countries-data.py.}
+a) Crea una función llamada los idiomas más hablados en el mundo. Debería devolver los 10 o 20 idiomasmás hablados en el mundo en orden descendente.
+b) Crea una función llamada los países más poblados. Debería devolver los 10 o 20 países más poblados en orden descendente.
+
+# a)
+from collections import Counter
+
+def los_idiomas_mas_hablados_en_el_mundo(num_idiomas):
+    contador_leguajes = Counter()
+    
+    for country in countries:
+        lenguajes = country['languages']
+        contador_leguajes.update(lenguajes)
+    lenguajes_mas_top = contador_leguajes.most_common(num_idiomas) 
+    return lenguajes_mas_top
+
+top_idiomas = los_idiomas_mas_hablados_en_el_mundo(10)
+print("Los 20 idiomas más hablados del mundo son:")
+for language, count in top_idiomas:
+    print(f"{language}: {count} países")
+
+print(" ")
+
+# b)
+def los_paises_mas_poblados(num_paises):
+    paises_mas_poblados_mundo = sorted(countries, key=lambda x: x['population'], reverse=True)[:10]
+    return paises_mas_poblados_mundo
+
+paises_mas_poblados = los_paises_mas_poblados(10)
+print("los 20 países más poblados en el mundo son: ")
+for index, country in enumerate(paises_mas_poblados, start=1):
+    print(f"{country['name']}: {country['population']} habitantes")
 
 
 ## TAREA 2
+Investigar el módulo sys
+10.1.2. Módulo sys
+El módulo sys es el encargado de proveer variables y funcionalidades, directamente relacionadas con el intérprete.
+
+10.1.2.1. Variables del módulo sys
+Entre las variables más destacadas podemos encontrar las siguientes:
+
+Variable	Descripción
+sys.argv	Retorna una lista con todos los argumentos pasados por línea de comandos. Al ejecutar python modulo.py arg1 arg2, retornará una lista: ['modulo.py', 'arg1', 'arg2']
+sys.executable	Retorna el path absoluto del binario ejecutable del intérprete de Python
+sys.maxint	Retorna el número positivo entero mayor, soportado por Python
+sys.platform	Retorna la plataforma sobre la cuál se está ejecutando el intérprete
+sys.version	Retorna el número de versión de Python con información adicional
+10.1.2.2. Métodos del módulo sys
+Entre los métodos más destacados del módulo sys, podemos encontrar los siguientes:
+
+Método	Descripción
+sys.exit()	Forzar la salida del intérprete
+sys.getdefaultencoding()	Retorna la codificación de caracteres por defecto
+sys.getfilesystemencoding()	Retorna la codificación de caracteres que se utiliza para convertir los nombres de archivos unicode en nombres de archivos del sistema
+sys.getsizeof(object[, default])	Retorna el tamaño del objeto pasado como parámetro. El segundo argumento (opcional) es retornado cuando el objeto no devuelve nada.
+Nota
+Más información sobre el módulo sys, puede obtenerse en la documentación oficial.
+https://docs.python.org/es/3/library/sys.html
 
 
 ## TAREA 3
