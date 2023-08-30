@@ -1,0 +1,39 @@
+SERON PALACIOS, JESUS MARIO
+CODIGO: 27220302
+#EJERCICIO 1
+
+print("PYTHON CONTRASEÑA SEGURA")
+
+
+try: 
+    from random import sample
+    import string
+    def generador_de_contraseñas(longitud):
+
+        letras = string.ascii_letters
+        digitos = string.digits
+        caracteres_especiales = string.punctuation
+        secuencia = letras + digitos + caracteres_especiales
+        union_contraseña = sample(secuencia, longitud)
+        resultado_contraseña = "".join(union_contraseña)
+        return resultado_contraseña
+    
+    contraseña = generador_de_contraseñas(10)
+    
+    print(contraseña)
+
+except ValueError: 
+    print("Dato no valido. ALgo solio mal.")
+# 12 puntos 
+
+# EJERCICIO 3 
+# Lista de Numeros primos 
+lista_numeros = [1,2,3,4,5,6,7,8,9]
+
+def es_primo(num):
+    if num % 2 != 0:
+        return True
+    return False
+numeros_primos = filter(es_primo, lista_numeros)
+print(list(numeros_primos))
+# 8 puntos.
